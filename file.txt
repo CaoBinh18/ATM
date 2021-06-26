@@ -1,0 +1,9 @@
+Sat Jun 26 22:13:36 ICT 2021
+Nguyen Van A: 29000001. Nap tien:1000002. Rut tien:4000003. Nap tien:2000000Sat Jun 26 22:15:14 ICT 2021
+Nguyen Van A: 1205000
+1. Nap tien:10000
+2. Rut tien:5000
+Sat Jun 26 22:16:48 ICT 2021
+Nguyen Van A: 1700050 vnd
+1. Nap tien:500000 vnd
+2. Nap tien:50 vnd
