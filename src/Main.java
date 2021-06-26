@@ -1,5 +1,6 @@
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
@@ -18,10 +19,10 @@ public class Main {
         System.out.println("4. Nhan phim H de xem lich su 3 lan");
         System.out.println("5. Nhan phim X de thoat");
         System.out.println("===========================================");
-
+        System.out.println("Nhap lua chon cua ban:");
 
         while (true) {
-            System.out.println("Nhap lua chon cua ban:");
+
             choice = sc.next().charAt(0);
 
             switch (choice) {
@@ -33,7 +34,15 @@ public class Main {
                 case 'D':
                     System.out.println("Giao dich Nap tien");
                     System.out.println("Vui long nhap so tien:");
-                    int amount = sc.nextInt();
+                    int amount = 0;
+                    try {
+                        amount = sc.nextInt();
+                    }
+                    catch (InputMismatchException e) {
+                        e.getStackTrace();
+//                        System.out.println("Vui long nhap lai so tien");
+                       break;
+                    }
                     System.out.printf("Giao dich thah cong ban vua nap <%d vnd> vao tai khoan", amount);
                     account.addToBalance(amount);
                     arr.add("Nap tien:" + amount);
@@ -44,7 +53,16 @@ public class Main {
                 case 'W':
                     System.out.println("Giao dich Rut tien");
                     System.out.println("Vui long nhap so tien:");
-                    int amountWithdrawal = sc.nextInt();
+                    int amountWithdrawal = 0;
+
+                    try {
+                        amountWithdrawal = sc.nextInt();
+                    }
+                    catch (InputMismatchException e) {
+                        e.getStackTrace();
+//                        System.out.println("Vui long nhap lai so tien");
+                        break;
+                    }
 
                     if (account.getBalance() > amountWithdrawal) {
                        account.subStractFromBalance(amountWithdrawal);
